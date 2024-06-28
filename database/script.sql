@@ -139,6 +139,23 @@ CREATE TABLE IF NOT EXISTS mydb.informasi_usaha (
   PRIMARY KEY (informasi_waktu))
 ENGINE = InnoDB;
 
+ALTER TABLE mydb.pesanan
+ADD COLUMN pesanan_status_delivery VARCHAR(15) DEFAULT 'Pending',
+ADD COLUMN pesanan_tanggal_pickup DATE NULL,
+ADD COLUMN pesanan_tanggal_delivery DATE NULL;
+
+CREATE TABLE IF NOT EXISTS mydb.pengiriman (
+  pengiriman_id INT NOT NULL AUTO_INCREMENT,
+  pesanan_id INT NOT NULL,
+  kurir_nama VARCHAR(45) NOT NULL,
+  kurir_kontak VARCHAR(15) NOT NULL,
+  waktu_pickup TIMESTAMP NULL,
+  waktu_delivery TIMESTAMP NULL,
+  status VARCHAR(15) DEFAULT 'Pending', -- seperti 'In Transit', 'Delivered', 'Picked Up'
+  PRIMARY KEY (pengiriman_id),
+  FOREIGN KEY (pesanan_id) REFERENCES mydb.pesanan (pesanan_id) ON DELETE CASCADE
+) ENGINE = InnoDB;
+
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
