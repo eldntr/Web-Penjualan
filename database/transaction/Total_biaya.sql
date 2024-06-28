@@ -3,7 +3,7 @@
 CREATE TABLE IF NOT EXISTS mydb.diskon_pelanggan (
   diskon_id INT NOT NULL AUTO_INCREMENT,
   pelanggan_id VARCHAR(15) NOT NULL,
-  diskon_persen DECIMAL(5,2) NOT NULL,  -- Persentase diskon, misal 15.00 untuk 15%
+  diskon_persen DECIMAL(3,2) NOT NULL,  -- Persentase diskon, misal 15.00 untuk 15%
   tanggal_mulai DATE,
   tanggal_berakhir DATE,
   PRIMARY KEY (diskon_id),
