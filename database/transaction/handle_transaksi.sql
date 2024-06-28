@@ -20,5 +20,5 @@ BEGIN
 END //
 delimiter ;
 
-CALL AddDetailPesanan('JS01', 2);
-CALL AddDetailPesanan('JS02', 3);
+CALL AddDetailPesanan('JS001', 2);
+CALL AddDetailPesanan('JS002', 3);
