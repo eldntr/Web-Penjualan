@@ -380,3 +380,72 @@ button:active{
 }
 
 /* experience */
+
+/* table */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #4CAF50;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.scrollable-table {
+  overflow-y: auto;
+  max-height: 400px;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid white;
+}
+
+th {
+  background-color: #4CAF50;
+}
+
+tbody tr:hover {
+  background-color: #457f27;
+}
+.scrollable-table {
+  overflow-x: auto; /* Memungkinkan scrolling horizontal jika diperlukan */
+  overflow-y: auto; /* Memungkinkan scrolling vertikal jika diperlukan */
+  max-height: 300px; /* Menyesuaikan tinggi maksimal untuk lebih kecil */
+  width: 100%; /* Menyesuaikan lebar agar sesuai dengan container */
+  margin: 20px 0;
+  border: 1px solid #ddd; /* Tambahkan border untuk memudahkan melihat batas */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* Minimum width untuk memastikan tabel tidak terlalu sempit */
+}
+
+th, td {
+  text-align: left;
+  padding: 12px; /* Penambahan padding untuk estetika */
+  border-bottom: 1px solid white; /* Kontras dengan warna latar */
+}
+
+th {
+  background-color: #4CAF50; /* Warna latar header tabel */
+}
+
+tbody tr:hover {
+  background-color: #457f27; /* Warna saat hover */
+}
