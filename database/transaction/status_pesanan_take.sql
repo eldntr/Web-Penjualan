@@ -11,7 +11,7 @@ ADD COLUMN status BOOLEAN DEFAULT FALSE;
 -- -----------------------------------------------------
 
 CREATE TRIGGER after_detail_update
-AFTER UPDATE ON mydb.detail_pesanan
+AFTER Insert ON mydb.detail_pesanan
 FOR EACH ROW
 BEGIN
   DECLARE total_items INT DEFAULT 0;
