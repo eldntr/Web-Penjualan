@@ -1,3 +1,4 @@
+delimiter //
 CREATE PROCEDURE AddDetailPesanan(
     IN p_jenis_sepatu_id CHAR(5),
     IN p_jumlah INT
@@ -16,7 +17,8 @@ BEGIN
     -- Menambahkan detail pesanan
     INSERT INTO detail_pesanan (detail_pesanan_jenis_sepatu, detail_pesanan_jumlah, detail_pesanan_total_biaya, detail_pesanan_pesanan_id)
     VALUES (p_jenis_sepatu_id, p_jumlah, v_total_biaya, @last_pesanan_id);  
-END;
+END //
+delimiter ;
 
 CALL AddDetailPesanan('JS01', 2);
 CALL AddDetailPesanan('JS02', 3);
