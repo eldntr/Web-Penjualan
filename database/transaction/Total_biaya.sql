@@ -1,3 +1,18 @@
+-- Menghitung total biaya pesanan setelah diskon
+-- Tambahkan tabel diskon:
+CREATE TABLE IF NOT EXISTS mydb.diskon_pelanggan (
+  diskon_id INT NOT NULL AUTO_INCREMENT,
+  pelanggan_id VARCHAR(15) NOT NULL,
+  diskon_persen DECIMAL(5,2) NOT NULL,  -- Persentase diskon, misal 15.00 untuk 15%
+  tanggal_mulai DATE,
+  tanggal_berakhir DATE,
+  PRIMARY KEY (diskon_id),
+  FOREIGN KEY (pelanggan_id) REFERENCES mydb.pelanggan (pelanggan_id) ON DELETE CASCADE
+) ENGINE = InnoDB;
+--
+-- -----------------------------------------------------
+
+DROP PROCEDURE IF EXISTS UpdateOrderTotal;
 CREATE PROCEDURE UpdateOrderTotal(pesananId INT)
 BEGIN
   DECLARE v_pelanggan_id VARCHAR(15);
@@ -28,7 +43,9 @@ BEGIN
   WHERE pesanan_id = pesananId;
 END;
 
-CREATE TRIGGER after_detail_update
+
+DROP TRIGGER IF EXISTS after_detail_insert;
+CREATE TRIGGER after_detail_insert
 AFTER UPDATE ON mydb.detail_pesanan
 FOR EACH ROW
 BEGIN
