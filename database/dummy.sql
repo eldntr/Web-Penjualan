@@ -1,0 +1,47 @@
+-- INSERT INTO pelanggan (pelanggan_id, pelanggan_nama, pelanggan_alamat) VALUES
+-- ('CUST001', 'Agus Salim', 'Jl. Arief Rahman Hakim No. 100'),
+-- ('CUST002', 'Siti Aminah', 'Jl. Raya Gubeng No. 45'),
+-- ('CUST003', 'Rahmat Hidayat', 'Jl. Darmo Permai No. 20'),
+-- ('CUST004', 'Nurul Huda', 'Jl. Jemursari Timur No. 11'),
+-- ('CUST005', 'Irfan Bachdim', 'Jl. Kenjeran No. 98'),
+-- ('CUST006', 'Wahyu Subuh', 'Jl. Gayungsari Barat No. 77'),
+-- ('CUST007', 'Retno Marsudi', 'Jl. Lidah Wetan No. 45'),
+-- ('CUST008', 'Dwi Susanto', 'Jl. Nginden Intan No. 15'),
+-- ('CUST009', 'Ayu Dewi', 'Jl. Keputih No. 3'),
+-- ('CUST010', 'Agung Laksono', 'Jl. Simo Pomahan No. 19'),
+-- ('CUST011', 'Andi Susanto', 'Jl. Pakis Argosari No. 17'),
+-- ('CUST012', 'Maria Ulfa', 'Jl. Gayungan IV No. 22'),
+-- ('CUST013', 'Yusuf Maulana', 'Jl. Karang Asem No. 5'),
+-- ('CUST014', 'Dewi Sartika', 'Jl. Kaliasin No. 8'),
+-- ('CUST015', 'Ahmad Dahlan', 'Jl. Mojo III No. 11'),
+-- ('CUST016', 'Sari Puspita', 'Jl. Panjang Jiwo No. 21'),
+-- ('CUST017', 'Bagus Kurniawan', 'Jl. Tambak Segaran No. 32'),
+-- ('CUST018', 'Rini Handayani', 'Jl. Ketintang Madya No. 47'),
+-- ('CUST019', 'Teguh Kusuma', 'Jl. Siwalankerto Timur No. 56'),
+-- ('CUST020', 'Nila Dwi Astuti', 'Jl. Ketintang Baru V No. 64'),
+-- ('CUST021', 'Fajar Nugraha', 'Jl. Jemur Andayani No. 28'),
+-- ('CUST022', 'Linda Kusmawati', 'Jl. Dukuh Kupang Barat No. 72'),
+-- ('CUST023', 'Rahman Indarto', 'Jl. Rungkut Harapan No. 85'),
+-- ('CUST024', 'Nur Hasan', 'Jl. Rungkut Asri Tengah No. 91'),
+-- ('CUST025', 'Eka Prasetya', 'Jl. Kalirungkut No. 98'),
+-- ('CUST026', 'Rini Agustina', 'Jl. Medokan Semampir Indah No. 104'),
+-- ('CUST027', 'Bambang Suryo', 'Jl. Margorejo Indah No. 118'),
+-- ('CUST028', 'Suci Ramadhani', 'Jl. Nginden Semolo No. 127'),
+-- ('CUST029', 'Arief Budiman', 'Jl. Mulyosari Prima No. 135'),
+-- ('CUST030', 'Galuh Saraswati', 'Jl. Raya Tenggilis No. 144');
+
+-- SELECT * FROM pelanggan;
+
+-- INSERT INTO pegawai (pegawai_id, pegawai_name, pegawai_alamat) VALUES
+-- ('EMP001', 'Budi Darmawan', 'Jl. Dharmahusada Indah Timur No. 35'),
+-- ('EMP002', 'Ratna Sari', 'Jl. Mayjen Sungkono No. 89'),
+-- ('EMP003', 'Joko Widodo', 'Jl. Manyar Kertoarjo V No. 62'),
+-- ('EMP004', 'Susilo Bambang', 'Jl. Margorejo Indah No. 97'),
+-- ('EMP005', 'Sri Mulyani', 'Jl. Menur Pumpungan No. 34'),
+-- ('EMP006', 'Mega Sari', 'Jl. Ngagel Jaya Selatan No. 73'),
+-- ('EMP007', 'Arief Yahya', 'Jl. Prapen Indah No. 15'),
+-- ('EMP008', 'Tri Rismaharini', 'Jl. Tenggilis Mejoyo No. 25'),
+-- ('EMP009', 'Anies Baswedan', 'Jl. Kertajaya Indah No. 29'),
+-- ('EMP010', 'Ganjar Pranowo', 'Jl. Siwalankerto No. 67');
+
+-- SELECT * FROM pegawai;
