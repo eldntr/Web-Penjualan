@@ -50,9 +50,9 @@ INSERT INTO jenis_sepatu (jenis_sepatu_id, jenis_sepatu_nama, jenis_sepatu_harga
 ('JS001', 'Sneakers', 15000.00),
 ('JS002', 'Boots', 20000.00),
 ('JS003', 'Flats', 10000.00),
-('JS04', 'High Heels', 350000),
-('JS05', 'Casual Shoes', 200000),
-('JS06', 'Formal Shoes', 600000);
+('JS004', 'High Heels', 35000),
+('JS005', 'Casual Shoes', 20000),
+('JS006', 'Formal Shoes', 60000);
 
 -- SELECT * FROM jenis_sepatu;
 
