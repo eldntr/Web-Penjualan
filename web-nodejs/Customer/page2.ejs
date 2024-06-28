@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles-page2.css">
+    <title>Teman Cuci Sepatu</title>
+</head>
+<body>  
+        <div class="logo">
+            <img src="./assets/logo.png" alt="TEMAN CUCI SEPATU">
+        </div>
+
+        <div class="content">
+            <header class="mainHeader">
+                <h1 class="boldLogo"> TEMAN CUCI SEPATU</h1>
+                 <h3 class="smallLogo">Specialist Shoes Cleaning</h3>
+            </header>
+            <form class="form" method="POST" action="/submit">
+                <div class="select">
+                    <select name="jenis">
+                        <option selected>Jenis</option>
+                        <option value="1">Deep Clean : 30k</option>
+                        <option value="2">Unyellowing : 30k</option>
+                        <option value="3">Repaint : 60k</option>
+                        <option value="4">Repair : 15k</option>
+                        <option value="5">Whitening Shoes Treatment : 45k</option>
+                    </select>
+                </div>
+                <div class="jumlah">
+                    <div class="jumlah-box">Jumlah</div>
+                    <div class="jumlah-titik">:</div>
+                    <input type="number" name="jumlah" class="jumlah-counter" value="1" min="1">
+                </div>
+                <div class="form-btn">
+                    <a class="btn btn-click">KEMBALI</a>
+                    <button type="submit" class="btn btn-click">LANJUT</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="sideBarRight">
+        </div>
+    
+    <footer>
+        <div>Follow Us On Instagram : @teman.cuci.sepatu</div>
+    </footer>
+    
+
+</body>
+</html>

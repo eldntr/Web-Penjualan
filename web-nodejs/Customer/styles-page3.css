@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --primary-color: #f8fafc; /* slate-50*/
+  --secondary-color: #fed7aa; /* orange-200 */
+  --yellow-color: #facc15; /*yellow-400*/
+  --stone-color:rgba(224, 214, 190, 0.5); /*stone-500*/
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+
+  box-sizing: border-box;
+}
+body {
+
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--primary-color);
+  grid-template-areas:
+    "logo mainHeader sideBarRight"
+    "content content content"
+    "footer footer footer";
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.logo {
+  grid-area: logo;
+  justify-self: end;
+  align-self: start;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-right: 2rem;
+}
+.logo img {
+  max-width: 40%;
+  height: auto;
+}
+.mainHeader {
+  grid-area: mainHeader;
+  justify-self: center;
+  align-self: start;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  width: auto;
+  height: auto;
+  background-color: var(--primary-color);
+  border: 1px solid var(--yellow-color);
+  border-radius: 2.5rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  /* shadow xl */
+
+  padding: 0.5rem 3rem;
+}
+
+.boldLogo {
+  color: var(--yellow-color);
+  font-weight: 700;
+  margin: 0;
+}
+.smallLogo {
+  margin: 0;
+  font-weight: 275;
+}
+/* main */
+
+
+
+
+
+.content {
+  height: 100%;
+  width: 50%;
+  grid-area: content;
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: self-start;
+  margin-top: 1rem;
+}
+
+.receipt{
+  background-color: var(--primary-color);
+  height: min(90%,400px);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0;
+  border: 1px solid black;
+}
+
+.receipt-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+    margin-left: 1rem;
+    border-bottom: 1px double black;
+    width: 95%;
+}
+.receipt-header-logo{
+    width: 4em;
+    position: relative;
+    bottom: 0.5rem;
+}
+.receipt-header-judul{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+}
+.receipt-header-judul-bold{
+    color: var(--yellow-color);
+    font-weight: 700;
+}
+.receipt-header-judul-kecil{
+    font-size: 0.6rem;
+    font-weight: 275;
+}
+.receipt-header-alamat{
+    font-size: 0.7rem;
+    font-weight: 275;
+}
+.receipt-pelanggan{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: 275;
+    font-size: 0.8rem;
+
+    border-bottom: 1px double black;
+    width: 95%;
+
+    
+
+}
+.pelanggan-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.pelanggan-nama{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.receipt-pesanan{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: 275;
+    font-size: 0.8rem;
+
+    width: 95%;
+
+    
+
+}
+.pesanan-detail{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.pesanan-nama{
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.total-bayar{
+    width: 80%;
+    font-weight: 275;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sideBarRight {
+  grid-area: sideBarRight;
+  position: relative;
+}
+
+.img-sepatu{
+  position: absolute;
+  top: -10rem;
+  opacity: 0.8;
+  z-index: -1;
+}
+/* footer */
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.41);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
