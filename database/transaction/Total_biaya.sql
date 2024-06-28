@@ -46,7 +46,7 @@ END;
 
 DROP TRIGGER IF EXISTS after_detail_insert;
 CREATE TRIGGER after_detail_insert
-AFTER UPDATE ON mydb.detail_pesanan
+AFTER INSERT ON mydb.detail_pesanan
 FOR EACH ROW
 BEGIN
   CALL UpdateOrderTotal(NEW.detail_pesanan_pesanan_id);

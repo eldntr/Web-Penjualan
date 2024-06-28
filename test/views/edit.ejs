@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Pesanan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Edit Pesanan</h1>
+  <form action="/edit/<%= order.id %>" method="POST">
+    <label for="name">Nama Pesanan:</label>
+    <input type="text" id="name" name="name" value="<%= order.name %>" required>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

@@ -3,15 +3,19 @@ const app = express();
 const path = require('path');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+const expressLayouts = require('express-ejs-layouts');
+const pageRoute = require('./Routes/pageRoute')
+const pelangganRoutes = require('./Routes/pelanggan');
 
-// Set the view engine to ejs
+// Middleware
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(expressLayouts); // Tambahkan ini
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// Set the views directory
-app.set('views', path.join(__dirname, 'customer'));
-
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'customer')));
+// Routes
+app.use('/admin', require('./Routes/pelanggan'));
 
 // Parse form data
 app.use(bodyParser.urlencoded({ extended: true }));

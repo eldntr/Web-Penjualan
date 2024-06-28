@@ -3,6 +3,17 @@ const app = express();
 const path = require('path');
 const ejs = require('ejs');
 const bodyParser = require('body-parser');
+const pageRoute = require('./routes/pelanggan')
+const pelangganRoutes = require('./routes/pelanggan');
+
+// Middleware
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Routes
+app.use('/admin', pelangganRoutes);
 
 // Set the view engine to ejs
 app.set('view engine', 'ejs');

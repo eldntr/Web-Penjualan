@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daftar Pesanan</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>Daftar Pesanan</h1>
+  <ul>
+    <% orders.forEach(order => { %>
+      <li>
+        <%= order.name %> 
+        <% if (order.completed) { %>
+          <form action="/toggle-complete" method="POST" style="display: inline;">
+            <input type="hidden" name="id" value="<%= order.id %>">
+            <button type="submit">✓ Selesai</button>
+          </form>
+        <% } else { %>
+          <form action="/toggle-complete" method="POST" style="display: inline;">
+            <input type="hidden" name="id" value="<%= order.id %>">
+            <button type="submit">✗ Belum Selesai</button>
+          </form>
+        <% } %>
+        <a href="/edit/<%= order.id %>">Edit</a>
+        <form action="/delete/<%= order.id %>" method="POST" style="display: inline;">
+          <button type="submit">Hapus</button>
+        </form>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

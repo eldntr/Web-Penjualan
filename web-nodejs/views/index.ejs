@@ -1,0 +1,11 @@
+<h1>Daftar Pelanggan</h1>
+<a href="/admin/add">Tambah Pelanggan</a>
+<ul>
+<% pelanggan.forEach(p => { %>
+    <li>
+        <%= p.nama %> - <%= p.alamat %>
+        <a href="/admin/edit/<%= p.id %>">Edit</a>
+        <a href="/admin/delete/<%= p.id %>">Delete</a>
+    </li>
+<% }) %>
+</ul>

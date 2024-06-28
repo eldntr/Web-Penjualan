@@ -1,0 +1,8 @@
+<h1>Edit Pelanggan</h1>
+<form action="/admin/edit/<%= pelanggan.id %>" method="POST">
+    <label>Nama:</label>
+    <input type="text" name="nama" value="<%= pelanggan.nama %>" required>
+    <label>Alamat:</label>
+    <input type="text" name="alamat" value="<%= pelanggan.alamat %>" required>
+    <button type="submit">Simpan</button>
+</form>
