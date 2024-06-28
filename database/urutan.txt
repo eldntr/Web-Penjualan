@@ -1,0 +1,10 @@
+1. Cek transaksi:
+- addPesanan() -> menambahkan pesanan dengan id pelanggan dan pegawai
+- addDetailPesanan() -> menambahkan detail pesanan dengan jenis dan jumlah
+- cek dengan diskon (tambahkan manual dengan insert) apakah harga berkurang jika menggunakan diskon
+2. Cek status
+- coba ubah status di pesanan berganti jika seluruh detail pesanan statusnya siap/sudah selesai 
+ubah saja manual pada attribut status detail pesanan, untuk pesanan otomatis dengan trigger
+3. Cek penggunaan bahan
+- masukkan penggunaan bahan manual lalu cek apakah berkurang setiap penambahan detail pesanan
+- cek apakah keuntungan di informasi penjualan hasil dari omset - penggunaan bahan
